@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">DFWINK</string>
+
+
+    <!--AWAITING_PROCESSING', 'PROCESSING', 'SHIPPED', 'DELIVERED', 'WILL_NOT_DELIVER', 'RETURNED', 'READY_FOR_PICKUP' -->
+
+    <string name="dfw_awaiting_processing">AWAITING PROCESSING</string>
+    <!--<string name="dfw_processing">PROCESSING</string>
+    <string name="dfw_shipped">SHIPPED</string>-->
+    <string name="dfw_delivered">DELIVERED</string>
+    <string name="dfw_will_not_deliver">WILL NOT DELIVER</string>
+    <string name="dfw_returned">RETURNED</string>
+    <!--    <string name="dfw_ready_for_pickup">READY FOR PICKUP</string>-->
+
+
+    <!-- OLD STATUS-->
+    <string name="dfw_processing">PROCESSING</string>
+    <string name="dfw_check_proof">CHECK PROOF(SMS ONLY)</string>
+    <string name="dfw_ready_for_production">READY FOR PRODUCTION</string>
+    <string name="dfw_ready_for_pickup">READY FOR PICKUP</string>
+    <string name="dfw_shipped">SHIPPED</string>
+    <string name="dfw_thank_you">THANK YOU</string>
+
+    <string name="dfw_net_errror">Please try again </string>
+
+    <!--To hit web service [PROCESSING, CHECK_PROOF_SMS_ONLY, READY_FOR_PRODUCTION, READY_FOR_PICKUP, SHIPPED, THANKYOU, PROCESSING]-->
+    <string name="web_processing">PROCESSING</string>
+    <string name="web_check_proof">CHECK_PROOF_SMS_ONLY</string>
+    <string name="web_ready_for_production">READY_FOR_PRODUCTION</string>
+    <string name="web_ready_for_pickup">READY_FOR_PICKUP</string>
+    <string name="web_shipped">SHIPPED</string>
+    <string name="web_thank_you">THANKYOU</string>
+
+</resources>

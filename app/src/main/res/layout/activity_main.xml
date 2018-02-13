@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="krescent.com.dfwink.Activity.MainActivity">
+
+
+    <Button
+        android:id="@+id/btnScan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#ffffff"
+        android:visibility="gone"
+        android:background="@drawable/ic_center_focus_strong_black_24dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+
+    <!-- Old code-->
+    <!--
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/my_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorAppBar"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Dashboard"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold" />
+        </android.support.v7.widget.Toolbar>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    &lt;!&ndash; FIRST COLUMN&ndash;&gt;
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/layoutAwaitingProcessing"
+                            android:layout_width="150dp"
+                            android:layout_height="140dp"
+                            android:layout_gravity="end"
+                            android:layout_marginRight="15dp"
+                            android:background="@drawable/rounded_button">
+
+                            <ImageView
+                                android:id="@+id/AwaitingProcessing"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="30dp"
+                                android:background="@drawable/ic_awaiting_processing"
+                                android:textAlignment="center" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/AwaitingProcessing"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="15dp"
+                                android:text="@string/dfw_awaiting_processing"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="11sp"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/layoutShipped"
+                            android:layout_width="150dp"
+                            android:layout_height="140dp"
+                            android:layout_gravity="right"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="25dp"
+                            android:background="@drawable/rounded_button">
+
+                            <ImageView
+                                android:id="@+id/imgShipped"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="29dp"
+                                android:background="@drawable/shipped_192"
+                                android:textAlignment="center" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/imgShipped"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="15dp"
+                                android:text="@string/dfw_shipped"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="11sp"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/layoutWillNotDeliver"
+                            android:layout_width="150dp"
+                            android:layout_height="140dp"
+                            android:layout_gravity="right"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="25dp"
+                            android:background="@drawable/rounded_button">
+
+                            <ImageView
+                                android:id="@+id/imgWillNotDeliver"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="30dp"
+                                android:background="@drawable/ic_will_not_deliver"
+                                android:textAlignment="center" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/imgWillNotDeliver"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="15dp"
+                                android:text="@string/dfw_will_not_deliver"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="11sp"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/layoutReadyForPickup"
+                            android:layout_width="150dp"
+                            android:layout_height="140dp"
+                            android:layout_gravity="right"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="25dp"
+                            android:background="@drawable/rounded_button">
+
+                            <ImageView
+                                android:id="@+id/imgReadyForPickup"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="30dp"
+                                android:background="@drawable/pickup_192"
+                                android:textAlignment="center" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/imgReadyForPickup"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="15dp"
+                                android:text="@string/dfw_ready_for_pickup"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="11sp"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                    &lt;!&ndash; SECOND COLUMN &ndash;&gt;
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/layoutProcessing"
+                            android:layout_width="150dp"
+                            android:layout_height="140dp"
+                            android:layout_gravity="left"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/rounded_button">
+
+                            <ImageView
+                                android:id="@+id/imgProcessing"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="30dp"
+                                android:background="@drawable/process_192"
+                                android:textAlignment="center" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/imgProcessing"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="15dp"
+                                android:text="@string/dfw_processing"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="11sp"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/layoutDelivered"
+                            android:layout_width="150dp"
+                            android:layout_height="140dp"
+                            android:layout_gravity="left"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="25dp"
+                            android:background="@drawable/rounded_button">
+
+                            <ImageView
+                                android:id="@+id/imgDelivered"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="30dp"
+                                android:background="@drawable/ic_delivery"
+                                android:textAlignment="center" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/imgDelivered"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="15dp"
+                                android:text="@string/dfw_delivered"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="11sp"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/layoutReturned"
+                            android:layout_width="150dp"
+                            android:layout_height="140dp"
+                            android:layout_gravity="start"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="25dp"
+                            android:background="@drawable/rounded_button">
+
+                            <ImageView
+                                android:id="@+id/imgReturned"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="30dp"
+                                android:background="@drawable/ic_returned"
+                                android:textAlignment="center" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/imgReturned"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="15dp"
+                                android:text="@string/dfw_returned"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="11sp"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+        </ScrollView>
+    </LinearLayout>
+-->
+</RelativeLayout>
